@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title> Make a Halloween webpage using for loops! </title>
+		<link rel="stylesheet" type="text/css" href="stylesheet/style.css">
+</head>
+<body>
+
+	<div class="welcome">
+		<img src="images/cuteghost!.png" width="100px" height="100px"> 
+		<h1>Type out "Halloween" to see some fun shades of the color orange!</h1>
+	</div>
+
+	<div class="orange"></div>
+	<div class="orange"></div>
+	<div class="orange"></div>
+	<div class="orange"></div>
+	<div class="orange"></div>
+	<div class="orange"></div>
+	<div class="orange"></div>
+	<div class="orange"></div>
+	<div class="orange"></div>
+	<div class="orange"></div>
+
+	<script type="text/javascript">
+
+		var color = 0;
+		document.addEventListener("keypress", function(event){
+			console.log(event);
+
+		var keyButton = event.key;
+		if(keyButton=='h') {
+				color = 30;
+			} else if (keyButton == 'a'){
+				color = 16;
+			} else if (keyButton == 'l'){
+				color = 24;
+			}
+			else if (keyButton == 'o'){
+				color = 16;
+			}
+			else if (keyButton == 'w'){
+				color = 29;
+			}
+			else if (keyButton == 'e'){
+				color = 31;
+			}
+			else if (keyButton == 'n'){
+				color = 38;
+			}
+			else if (keyButton == 'b','c','d','f','g','i','j','k','m','p','q','r','s','t','u','v','x','y', 'z'){
+				color = 0;
+			}
+
+
+		var divs = document.getElementsByClassName("orange")
+
+		for(var i=0; i<divs.length; i++) {
+			divs[i].style.background = "hsl("+ color +", 100%, 50%)";
+			}
+
+		});
+
+
+	</script>
+
+
+
+
+</body>
+</html>
